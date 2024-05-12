@@ -111,6 +111,10 @@ app.delete('/todos/:id', middleware1, (req,res) => {
   });
 })
 
+app.use((req, res, next) => {
+  res.status(404).send();
+});
+
 module.exports = app;
 
 // app.listen(port, () => {
